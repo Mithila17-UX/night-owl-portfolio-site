@@ -24,33 +24,33 @@ const Index = () => {
     name: "Node.js",
     level: 88
   }, {
-    name: "Python",
-    level: 85
+    name: "Java",
+    level: 98
   }, {
-    name: "PostgreSQL",
-    level: 80
+    name: "R",
+    level: 82
   }];
   const projects = [{
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
+    title: "Java Inventory Management and POS System",
+    description: "A desktop POS application for comprehensive sales and inventory management, supporting real-time stock tracking, sales transactions, and product management. Utilizes MS SQL for secure data storage and fast reporting with essential business insights.",
+    technologies: ["Java", "MSSQL", "SSMS"],
     github: "#",
     demo: "#",
-    icon: <Globe className="w-6 h-6" />
+    icon: <Database className="w-6 h-6" />
   }, {
-    title: "Task Management App",
-    description: "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    technologies: ["TypeScript", "React", "Firebase", "Tailwind"],
+    title: "MemoFlow - Android Mobile Application",
+    description: "A robust memo/notes manager with features for creating, updating, scheduling, and sharing notes, complete with reminders for effective time management. Integrated with Firebase for real-time syncing and secure storage.",
+    technologies: ["Java", "Firebase", "Android"],
     github: "#",
     demo: "#",
     icon: <Smartphone className="w-6 h-6" />
   }, {
-    title: "Data Analytics Dashboard",
-    description: "Interactive dashboard for data visualization and analytics with real-time charts, filters, and export functionality.",
-    technologies: ["Python", "Django", "D3.js", "PostgreSQL"],
+    title: "Inventory Management System",
+    description: "Inventory Management system with responsive dashboard for Good Go Online (PVT) LTD - Kurunagala, created with Java Spring boot framework, Tauri and MongoDB for comprehensive business management.",
+    technologies: ["Spring-boot", "MongoDB", "Tauri"],
     github: "#",
     demo: "#",
-    icon: <Database className="w-6 h-6" />
+    icon: <Globe className="w-6 h-6" />
   }];
   const services = [
     {
@@ -161,7 +161,7 @@ const Index = () => {
               </p>
               
               <div className="flex flex-wrap gap-3">
-                {["React", "TypeScript", "Node.js", "Python", "AWS", "Docker", "PostgreSQL", "MongoDB"].map(tech => (
+                {["React", "TypeScript", "Node.js", "Java", "AWS", "Docker", "R", "MongoDB"].map(tech => (
                   <Badge key={tech} variant="secondary" className="bg-slate-800 text-green-400 border-green-400/20">
                     {tech}
                   </Badge>
