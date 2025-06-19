@@ -3,7 +3,6 @@ import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Smartphone
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -226,9 +225,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 px-4 sm:px-6 lg:px-8 bg-slate-900 border-t border-slate-800">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-slate-400">
-            © 2024 Alex Chen. Built with React & Tailwind CSS.
-          </p>
+          <p className="text-slate-400">© 2025 Mithila Sanoj. Built with React & Tailwind CSS.</p>
         </div>
       </footer>
     </div>;
