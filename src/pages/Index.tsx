@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Smartphone
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -208,7 +209,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
               <Mail className="w-5 h-5 mr-2" />
-              alex.chen@email.com
+              Sanojdesilva24065@gmail.com
             </Button>
             <div className="flex gap-4">
               <Button variant="outline" size="icon" className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-blue-400 rounded-full">
