@@ -143,7 +143,7 @@ const Index = () => {
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            <span className="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
               About Me
             </span>
           </h2>
@@ -162,7 +162,7 @@ const Index = () => {
               
               <div className="flex flex-wrap gap-3">
                 {["React", "TypeScript", "Node.js", "Python", "AWS", "Docker", "PostgreSQL", "MongoDB"].map(tech => (
-                  <Badge key={tech} variant="secondary" className="bg-slate-800 text-sky-400 border-sky-400/20">
+                  <Badge key={tech} variant="secondary" className="bg-slate-800 text-green-400 border-green-400/20">
                     {tech}
                   </Badge>
                 ))}
@@ -170,16 +170,16 @@ const Index = () => {
             </div>
             
             <div className="space-y-6">
-              <h3 className="text-2xl font-semibold mb-6 text-sky-400">Skills & Expertise</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-green-400">Skills & Expertise</h3>
               {skills.map(skill => (
                 <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between">
                     <span className="text-slate-300">{skill.name}</span>
-                    <span className="text-sky-400">{skill.level}%</span>
+                    <span className="text-green-400">{skill.level}%</span>
                   </div>
                   <div className="w-full bg-slate-800 rounded-full h-2">
                     <div 
-                      className="bg-gradient-to-r from-sky-500 to-cyan-500 h-2 rounded-full transition-all duration-1000 ease-out" 
+                      className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-1000 ease-out" 
                       style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
@@ -244,7 +244,7 @@ const Index = () => {
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
-            <span className="bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
               Hire Me
             </span>
           </h2>
@@ -254,9 +254,9 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-sky-500/20">
+              <Card key={index} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
                 <CardHeader className="text-center">
-                  <div className="mx-auto mb-4 p-3 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-full w-fit">
+                  <div className="mx-auto mb-4 p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit">
                     {service.icon}
                   </div>
                   <CardTitle className="text-xl text-white">{service.title}</CardTitle>
@@ -266,16 +266,16 @@ const Index = () => {
                 </CardHeader>
                 <CardContent className="text-center">
                   <div className="space-y-4">
-                    <div className="text-2xl font-bold text-sky-400 flex items-center justify-center gap-2">
+                    <div className="text-2xl font-bold text-green-400 flex items-center justify-center gap-2">
                       <DollarSign className="w-5 h-5" />
                       {service.startingPrice}
                     </div>
                     {service.negotiable && (
-                      <Badge variant="outline" className="border-cyan-400/30 text-cyan-400">
+                      <Badge variant="outline" className="border-emerald-400/30 text-emerald-400">
                         Negotiable
                       </Badge>
                     )}
-                    <Button className="w-full bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 text-white">
+                    <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white">
                       Get Quote
                     </Button>
                   </div>
