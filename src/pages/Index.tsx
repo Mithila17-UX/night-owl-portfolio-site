@@ -3,14 +3,11 @@ import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Smartphone
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
   const skills = [{
     name: "JavaScript",
     level: 95
@@ -52,45 +49,37 @@ const Index = () => {
     demo: "#",
     icon: <Globe className="w-6 h-6" />
   }];
-  const services = [
-    {
-      title: "Software Application",
-      description: "Custom desktop and web applications built with modern technologies",
-      startingPrice: "RS.20,000/-",
-      negotiable: true,
-      icon: <Code className="w-6 h-6" />
-    },
-    {
-      title: "Website",
-      description: "Responsive websites and web applications with modern design",
-      startingPrice: "RS.10,000/-",
-      negotiable: true,
-      icon: <Globe className="w-6 h-6" />
-    },
-    {
-      title: "Mobile Application",
-      description: "Cross-platform mobile apps for iOS and Android",
-      startingPrice: "RS.25,000/-",
-      negotiable: true,
-      icon: <Smartphone className="w-6 h-6" />
-    },
-    {
-      title: "UI/UX Design",
-      description: "User interface and experience design for digital products",
-      startingPrice: "Negotiable",
-      negotiable: true,
-      icon: <Star className="w-6 h-6" />
-    }
-  ];
-
+  const services = [{
+    title: "Software Application",
+    description: "Custom desktop and web applications built with modern technologies",
+    startingPrice: "RS.20,000/-",
+    negotiable: true,
+    icon: <Code className="w-6 h-6" />
+  }, {
+    title: "Website",
+    description: "Responsive websites and web applications with modern design",
+    startingPrice: "RS.10,000/-",
+    negotiable: true,
+    icon: <Globe className="w-6 h-6" />
+  }, {
+    title: "Mobile Application",
+    description: "Cross-platform mobile apps for iOS and Android",
+    startingPrice: "RS.25,000/-",
+    negotiable: true,
+    icon: <Smartphone className="w-6 h-6" />
+  }, {
+    title: "UI/UX Design",
+    description: "User interface and experience design for digital products",
+    startingPrice: "Negotiable",
+    negotiable: true,
+    icon: <Star className="w-6 h-6" />
+  }];
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white">
+  return <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-sky-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -150,41 +139,32 @@ const Index = () => {
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
-                I'm a passionate full-stack developer with 5+ years of experience creating scalable web applications. 
-                I specialize in React, Node.js, and cloud technologies, with a focus on delivering clean, efficient code 
-                and exceptional user experiences.
-              </p>
+              <p className="text-lg text-slate-300 mb-6 leading-relaxed">I'm a passionate full-stack developer with 2+ years of experience creating scalable Software/WEB/Mobile applications. I specialize in Java, Node.js, React, R, and cloud technologies, with a focus on delivering clean, efficient code and exceptional user experiences.</p>
               <p className="text-lg text-slate-300 mb-8 leading-relaxed">
                 When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
                 or mentoring fellow developers in the community.
               </p>
               
               <div className="flex flex-wrap gap-3">
-                {["React", "TypeScript", "Node.js", "Java", "AWS", "Docker", "R", "MongoDB"].map(tech => (
-                  <Badge key={tech} variant="secondary" className="bg-slate-800 text-green-400 border-green-400/20">
+                {["React", "TypeScript", "Node.js", "Java", "AWS", "Docker", "R", "MongoDB"].map(tech => <Badge key={tech} variant="secondary" className="bg-slate-800 text-green-400 border-green-400/20">
                     {tech}
-                  </Badge>
-                ))}
+                  </Badge>)}
               </div>
             </div>
             
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold mb-6 text-green-400">Skills & Expertise</h3>
-              {skills.map(skill => (
-                <div key={skill.name} className="space-y-2">
+              {skills.map(skill => <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between">
                     <span className="text-slate-300">{skill.name}</span>
                     <span className="text-green-400">{skill.level}%</span>
                   </div>
                   <div className="w-full bg-slate-800 rounded-full h-2">
-                    <div 
-                      className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-1000 ease-out" 
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
+                    <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-1000 ease-out" style={{
+                  width: `${skill.level}%`
+                }}></div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -200,8 +180,7 @@ const Index = () => {
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-sky-500/20">
+            {projects.map((project, index) => <Card key={index} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-sky-500/20">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-3">
                     <div className="p-2 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-lg">
@@ -216,11 +195,9 @@ const Index = () => {
                 <CardContent>
                   <div className="space-y-4">
                     <div className="flex flex-wrap gap-2">
-                      {project.technologies.map(tech => (
-                        <Badge key={tech} variant="outline" className="border-sky-400/30 text-sky-400">
+                      {project.technologies.map(tech => <Badge key={tech} variant="outline" className="border-sky-400/30 text-sky-400">
                           {tech}
-                        </Badge>
-                      ))}
+                        </Badge>)}
                     </div>
                     <div className="flex gap-3">
                       <Button size="sm" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700">
@@ -234,8 +211,7 @@ const Index = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -253,8 +229,7 @@ const Index = () => {
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
+            {services.map((service, index) => <Card key={index} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
                 <CardHeader className="text-center">
                   <div className="mx-auto mb-4 p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit">
                     {service.icon}
@@ -270,18 +245,15 @@ const Index = () => {
                       <DollarSign className="w-5 h-5" />
                       {service.startingPrice}
                     </div>
-                    {service.negotiable && (
-                      <Badge variant="outline" className="border-emerald-400/30 text-emerald-400">
+                    {service.negotiable && <Badge variant="outline" className="border-emerald-400/30 text-emerald-400">
                         Negotiable
-                      </Badge>
-                    )}
+                      </Badge>}
                     <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white">
                       Get Quote
                     </Button>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -322,8 +294,6 @@ const Index = () => {
           <p className="text-slate-400">© 2025 Mithila Sanoj. Built with React & Tailwind CSS.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
